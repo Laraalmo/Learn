@@ -8,10 +8,10 @@ app_name="Together We Learn"
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$',views.index,name="index"),
-    url(r'^list/$', views.listSkills,name="list"),
-    url(r'^list/$', views.user,name="sign"),
-    url(r'^list/$', views.comment,),
-    url(r'^list/$', views.showProfile,name="profile")
+    url(r'^$', views.listSkills,name="list"),
+    url(r'^$', views.user,name="sign"),
+    url(r'^$', views.comment,),
+    url(r'^$', views.showProfile,name="profile")
 
 
 
