@@ -10,6 +10,14 @@ class User(models.Model):
  E_mail=models.EmailField(null=False,blank=True)
  JoinDate=models.TimeField(null=True)
 
+ from django.contrib.auth.models import User
+ from django.utils.translation import ugettext as _
+ from userena.models import User
+
+ class MyProfile(User):
+  user = models.OneToOneField(User,unique=True,verbose_name=('user'),related_name='my_profile')
+  favourite_snack = models.CharField(('favourite snack'),max_length=5)
+
 def __str__(self):
     return self.TalentDescription
 #skill

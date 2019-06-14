@@ -11,7 +11,8 @@ urlpatterns = [
     url(r'^$', views.listSkills,name="list"),
     url(r'^$', views.user,name="sign"),
     url(r'^$', views.comment,),
-    url(r'^$', views.showProfile,name="profile")
+    url(r'^$', views.showProfile,name="profile"),
+    url(r'^accounts/', include('userena.urls')),
 
 
 
